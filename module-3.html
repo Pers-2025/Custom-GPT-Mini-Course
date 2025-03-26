@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 3: Plan & Design Your GPT | Build Your Custom GPT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e2e6ea;
+      color: #2c3e50;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #1d3557;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      color: #457b9d;
+    }
+
+    textarea {
+      width: 100%;
+      height: 140px;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 1rem;
+      resize: vertical;
+    }
+
+    .button {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background-color: #457b9d;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #365a7d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Module 3: Plan & Design Your GPT</h1>
+    <p>
+      A well-planned GPT gives better results. In this module, you’ll define your GPT’s personality, tone, and the type of answers it should give.
+    </p>
+
+    <h2>✍️ Step 1: Write Your GPT's Mission Statement</h2>
+    <p>What should your GPT do, and who is it for? Be specific. Example: "This GPT helps freelance writers set their pricing and communicate it clearly to clients."</p>
+    <textarea id="missionInput" placeholder="Write your GPT’s mission statement..."></textarea>
+
+    <h2>🎭 Step 2: Define Its Personality and Tone</h2>
+    <p>Should it sound formal, friendly, witty, supportive? Think of how you want users to experience it.</p>
+    <textarea id="toneInput" placeholder="Describe your GPT’s tone and style..."></textarea>
+
+    <h2>📐 Step 3: Response Style & Format</h2>
+    <p>Should your GPT respond in steps? Bullet points? Short answers or detailed explanations?</p>
+    <textarea id="formatInput" placeholder="How should your GPT respond to users?..."></textarea>
+
+    <button class="button" onclick="downloadModule3()">💾 Save My GPT Plan</button>
+  </div>
+
+  <script>
+    function downloadModule3() {
+      const mission = document.getElementById("missionInput").value;
+      const tone = document.getElementById("toneInput").value;
+      const format = document.getElementById("formatInput").value;
+      const content = `GPT Mission Statement:\n${mission}\n\nTone & Personality:\n${tone}\n\nResponse Format:\n${format}`;
+      const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "my-custom-gpt-module3.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>

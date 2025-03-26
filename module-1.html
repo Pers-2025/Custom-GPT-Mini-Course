@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 1: Introduction | Build Your First Custom GPT</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e2e6ea;
+      color: #2c3e50;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 2.5rem;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1d3557;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    textarea {
+      width: 100%;
+      height: 180px;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      background-color: #457b9d;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+
+    .button:hover {
+      background-color: #365a7d;
+    }
+
+    .nav-buttons {
+      margin-top: 2rem;
+      text-align: right;
+    }
+
+    .download-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Module 1: Introduction</h1>
+    <p>
+      Welcome! In this module, you'll learn what Custom GPTs are and why they matter. You don’t need coding skills — just a goal, a problem to solve, and some strategic thinking. 
+    </p>
+    <p>
+      Custom GPTs allow you to create AI assistants that speak your language, follow your tone, and help you with repetitive work like content creation, research, lesson planning, or client onboarding.
+    </p>
+    <p><strong>Reflection Activity:</strong> Why do you want to create a Custom GPT? What problem or task do you hope it will help you with?</p>
+
+    <textarea id="reflectionInput" placeholder="Type your response here..."></textarea>
+
+    <div class="download-section">
+      <button class="button" onclick="downloadResponse()">Download My Response</button>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="module-2.html" class="button">Next Module →</a>
+    </div>
+  </div>
+
+  <script>
+    function downloadResponse() {
+      const content = document.getElementById("reflectionInput").value;
+      const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "module-1-response.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Module 6: Publish & Share | Build Your First Custom GPT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e2e6ea;
+      color: #2c3e50;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #1d3557;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      color: #457b9d;
+    }
+
+    textarea {
+      width: 100%;
+      height: 180px;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 1rem;
+      resize: vertical;
+    }
+
+    .button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #457b9d;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #365a7d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Module 6: Publish and Share</h1>
+    <p>You've built your Custom GPT. Now it’s time to make it live and start sharing it with the world!</p>
+
+    <h2>Step 1: Publish Your GPT</h2>
+    <p>In the GPT Builder, go to the “Configure” tab and click <strong>Publish</strong>. You can choose to make it:</p>
+    <ul>
+      <li><strong>Public:</strong> Anyone can find and use it in the GPT store.</li>
+      <li><strong>Private:</strong> Only those with your link can access it (ideal for client projects or internal tools).</li>
+    </ul>
+
+    <h2>Step 2: Write a Compelling Description</h2>
+    <p>Your GPT description is your “sales pitch.” Briefly explain:</p>
+    <ul>
+      <li>What it does</li>
+      <li>Who it helps</li>
+      <li>What makes it unique</li>
+    </ul>
+
+    <h2>Step 3: Share It!</h2>
+    <p>Start spreading the word! Post the link on your:</p>
+    <ul>
+      <li>Website or blog</li>
+      <li>Email newsletter</li>
+      <li>Social media</li>
+      <li>LinkedIn profile</li>
+      <li>WhatsApp groups or client messages</li>
+    </ul>
+
+    <h2>Your Activity</h2>
+    <p><strong>Write your public GPT description + share plan below:</strong></p>
+
+    <textarea id="sharePlan" placeholder="Write your GPT description and where you'll share it..."></textarea>
+    <button class="button" onclick="downloadPlan()">Download My Launch Plan</button>
+  </div>
+
+  <script>
+    function downloadPlan() {
+      const content = document.getElementById("sharePlan").value;
+      const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "custom-gpt-launch-plan.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
