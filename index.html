@@ -3,61 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Custom GPT Creation Mini Course</title>
+  <title>Custom GPT Mini Course</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <style>
-    :root {
-      --primary: #457b9d;
-      --secondary: #1d3557;
-      --text-color: #000;
-    }
-
     body {
       font-family: 'Inter', sans-serif;
-      background: #f0f4f8;
-      color: var(--text-color);
+      background-color: #f0f4f8;
+      color: #000;
+      line-height: 1.7;
       margin: 0;
       padding: 0;
-      line-height: 1.7;
     }
 
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    h1, h2, h3 {
-      color: var(--secondary);
+      padding: 2rem 1.5rem;
     }
 
     h1 {
       font-size: 2.8rem;
       font-weight: 900;
-      margin-bottom: 1.5rem;
+      color: #1d3557;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1d3557;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
       text-align: center;
     }
 
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-top: 2rem;
+    p, li {
+      font-size: 1.1rem;
     }
 
     .grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
 
     .card {
@@ -65,30 +54,34 @@
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border: 1px solid #e0e0e0;
       flex: 1;
       min-width: 280px;
-      border: 1px solid #e0e0e0;
+      max-width: 300px;
     }
 
-    .card h3 {
-      margin-top: 0;
+    .button {
+      display: inline-block;
+      background-color: #457b9d;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
     }
 
-    .faq dt {
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-
-    .faq dd {
-      margin-bottom: 1rem;
+    .button:hover {
+      background-color: #3d6d8c;
     }
 
     .pledge-box {
       background: white;
-      border-left: 4px solid var(--primary);
+      border-left: 4px solid #457b9d;
       padding: 1.5rem;
-      font-size: 1.1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin-top: 1rem;
     }
 
     footer {
@@ -102,88 +95,73 @@
       h1 {
         font-size: 2.2rem;
       }
-
       .grid {
         flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
     <h1>Custom GPT Creation Mini Course</h1>
+    <p style="text-align:center; max-width: 700px; margin: 0 auto 2rem;">
+      A step-by-step guide to help you create and publish your own Custom GPT — even if you're not technical. This 6-module course gives you everything you need to build your first GPT in a single day.
+    </p>
 
-    <section class="section">
-      <p>Learn how to create, structure, and publish your very own Custom GPT — even if you're not a developer. In just one day, you’ll have your own assistant live, useful, and sharable.</p>
-    </section>
-
-    <section class="section">
-      <h2>Course Modules</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Module 1: Overview & Setup</h3>
-          <p>Understand what Custom GPTs are and how to prepare your topic, audience, and assets.</p>
-        </div>
-        <div class="card">
-          <h3>Module 2: Prompting Logic</h3>
-          <p>Learn how to design behavior and personality using instructions and examples.</p>
-        </div>
-        <div class="card">
-          <h3>Module 3: File Uploads & Knowledge</h3>
-          <p>Teach your GPT specific content with uploaded files, links, or documentation.</p>
-        </div>
-        <div class="card">
-          <h3>Module 4: Actions (APIs)</h3>
-          <p>Extend your GPT’s functionality by integrating APIs using OpenAPI specs.</p>
-        </div>
-        <div class="card">
-          <h3>Module 5: Testing & Use Cases</h3>
-          <p>Test your GPT, refine its responses, and explore possible real-world uses.</p>
-        </div>
-        <div class="card">
-          <h3>Module 6: Publishing & Sharing</h3>
-          <p>Customize branding, publish privately or publicly, and generate your unique GPT link.</p>
-        </div>
+    <h2>What You’ll Learn</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Module 1: Overview & Setup</h3>
+        <p>Learn how GPTs work, what's possible, and how to prepare your idea and structure.</p>
       </div>
-    </section>
-
-    <section class="section">
-      <h2>Is This For You?</h2>
-      <ul>
-        <li>You want to create a useful AI tool for your work or audience</li>
-        <li>You don’t want to learn coding but still want powerful automation</li>
-        <li>You enjoy working independently with the right instructions</li>
-        <li>You want to test an idea quickly before investing too much time</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>FAQs</h2>
-      <dl class="faq">
-        <dt>Do I need coding experience?</dt>
-        <dd>No. This course is built for non-developers.</dd>
-
-        <dt>Can I use free ChatGPT to build a custom GPT?</dt>
-        <dd>No. You'll need access to ChatGPT Plus to publish a GPT.</dd>
-
-        <dt>Can I use this for clients or business?</dt>
-        <dd>Yes. Many participants use this process to build internal or customer-facing tools.</dd>
-
-        <dt>How long will this take?</dt>
-        <dd>You can go through all six modules in one focused day or at your own pace.</dd>
-      </dl>
-    </section>
-
-    <section class="section">
-      <h2>My Pledge</h2>
-      <div class="pledge-box">
-        This course is designed to get you from idea to live GPT quickly and clearly. You’ll follow a system that works. If you feel stuck, reach out — I’ll help you move forward.
+      <div class="card">
+        <h3>Module 2: Prompting Logic</h3>
+        <p>Design your GPT’s behavior using clear instructions and strategic examples.</p>
       </div>
-    </section>
+      <div class="card">
+        <h3>Module 3: Uploads & Knowledge</h3>
+        <p>Teach your GPT using files, FAQs, product guides, or internal docs.</p>
+      </div>
+      <div class="card">
+        <h3>Module 4: Actions (APIs)</h3>
+        <p>Extend your GPT with real-time features like calculators or databases using APIs.</p>
+      </div>
+      <div class="card">
+        <h3>Module 5: Testing & Use Cases</h3>
+        <p>Refine your GPT and explore business or personal applications.</p>
+      </div>
+      <div class="card">
+        <h3>Module 6: Publishing & Sharing</h3>
+        <p>Customize branding, privacy, access, and launch your GPT to the world.</p>
+      </div>
+    </div>
 
-    <section class="section" style="text-align: center;">
+    <h2>Is This Mini Course For You?</h2>
+    <ul>
+      <li>You want to create a GPT assistant for your audience or team</li>
+      <li>You don’t want to write code, but want your GPT to feel professional</li>
+      <li>You’ve got a useful idea but don’t know where to start</li>
+      <li>You want to create a working GPT in a day or weekend</li>
+    </ul>
+
+    <h2>FAQs</h2>
+    <ul>
+      <li><strong>Do I need coding experience?</strong> No. You’ll follow step-by-step instructions designed for non-developers.</li>
+      <li><strong>Do I need to pay for ChatGPT Plus?</strong> Yes. GPT creation is only available to Plus users.</li>
+      <li><strong>Can I use this for business?</strong> Yes. You’ll learn how to build GPTs for clients or internal use.</li>
+      <li><strong>How long will it take?</strong> The entire course can be completed in a day, or split across a weekend.</li>
+    </ul>
+
+    <h2>My Pledge</h2>
+    <div class="pledge-box">
+      This mini course is made to help you create something useful and simple. If you get stuck, reach out and I’ll help you move forward.
+    </div>
+
+    <div style="text-align:center;">
       <a href="module-1.html" class="button">Start Module 1</a>
-    </section>
+    </div>
 
     <footer>
       <p>Need help? Email <a href="mailto:admin@digitalwisdomhub.com">admin@digitalwisdomhub.com</a></p>
