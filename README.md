@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Custom GPT Mini-Course</title>
-  </head>
-  <body>
-    <h1>Welcome to the Custom GPT Mini-Course</h1>
-    <p><a href="module-1.html">Start Module 1</a></p>
+# CUSTOM GPT CREATION MINI COURSE
+Create and Publish your Custom GPT in 1 Day- 6- Module Mini-Course
+<p><a href="module-1.html">Start Module 1</a></p>
   </body>
 </html>
